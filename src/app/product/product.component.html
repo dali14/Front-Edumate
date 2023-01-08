@@ -1,0 +1,134 @@
+<header class="header-area">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-wrapper d-flex flex-wrap justify-content-sm-between">
+                <div class="header-top-left mt-10">
+                    <ul class="header-meta">
+                        <li><a href="mailto://infoedumate@example.com">isetbizerte@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="header-top-right mt-10">
+                    <div class="header-link">
+                        <a class="login" (click)="goToLogin()">Login</a>
+                        <a class="register" (click)="goToRegister()">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="navigation" class="navigation navigation-landscape">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <div class="header-logo">
+                        <a ><img src="assets/images/logo.webp" width="135" height="88" alt="Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 position-static">
+                    <div class="nav-toggle"></div>
+                    <nav class="nav-menus-wrapper">
+                        <ul class="nav-menu">
+                            <li>
+                                <a class="active" (click)="goToHome()">Home</a>
+                                
+                            </li>
+                            <li>
+                                <a (click)="goToCourse()">Courses</a>
+                            </li>
+                            <li>
+                                <a (click)="goToEvent()">Events</a>
+                                
+                            </li>
+                            <li>
+                                <a (click)="goToProduct()">Product</a>
+                                
+                            </li>
+                            
+                            <li><a (click)="goToContact()">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="event-area" style="margin-top: 100px;">
+    <div class="container" style="text-align: center;">
+        <div class="event-title-tab-menu">
+            <div class="event-title mt-10">
+                <h2  class="title">Our <br> Product</h2>
+            </div>
+
+            
+        </div>
+        <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary w-90 my-3 shadow">Add Products</button>
+
+                    
+    </div>
+</section>
+
+<table class="table table-hover" style="margin-top: 60px;">
+    <thead class=" table-blue">
+      <tr>
+        <th scope="col"><h3>Name</h3></th>
+        <th scope="col"><h3>Price</h3></th>
+        <th scope="col"><h3>Valable</h3></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let row of productData">
+      <tr>
+        
+        <td>{{row.name}}</td>
+        <td>{{row.price}}</td>
+        <td>{{row.valable}}</td>
+        <td>
+            <button (click)="deleteProduct(row)" class="btn btn-danger mx-3">delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name Product</label>
+                    <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Price Product </label>
+                    <input type="text" formControlName="price" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter price">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Valable</label>
+                  <input type="email" formControlName="valable" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter valable">
+                </div>
+                
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" (click)="postProductDetails()" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,97 @@
+<header class="header-area">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-wrapper d-flex flex-wrap justify-content-sm-between">
+                <div class="header-top-left mt-10">
+                    <ul class="header-meta">
+                        <li><a href="mailto://infoedumate@example.com">isetbizerte@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="header-top-right mt-10">
+                    <div class="header-link">
+                        <a class="login" (click)="goToLogin()">Login</a>
+                        <a class="register" (click)="goToRegister()">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="navigation" class="navigation navigation-landscape">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <div class="header-logo">
+                        <a href="index.html"><img src="assets/images/logo.webp" width="135" height="88" alt="Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 position-static">
+                    <div class="nav-toggle"></div>
+                    <nav class="nav-menus-wrapper">
+                        <ul class="nav-menu">
+                            <li>
+                                <a class="active" (click)="goToHome()">Home</a>
+                                
+                            </li>
+                            <li>
+                                <a (click)="goToCourse()">Courses</a>
+                            </li>
+                            <li>
+                                <a (click)="goToEvent()">Events</a>
+                                
+                            </li>
+                            <li>
+                                <a (click)="goToProduct()">Product</a>
+                                
+                            </li>
+                            
+                            <li><a (click)="goToContact()">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2 position-static">
+                    <div class="header-search">
+                        <form action="#">
+                            <input type="text" placeholder="Search">
+                            <button><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<form>
+
+    <main class="form-signin" style="margin-top: 200px;">
+      
+      <div class="col-md-6 col-lg-4 offset-lg-4 offset-md-3 mt-5">
+        <div class="bg-light p-5 border shadow">
+            <!-- Login Form -->
+            <form [formGroup]="signupForm" (ngSubmit)="signUp()">                
+                <div class="mb-4">
+                    <input type="text" formControlName="name" class="form-control" id="floatingName" placeholder="Name">
+                    <p class="form-text text-end">Enter Name</p>
+                </div>
+                <div class="mb-4">
+                    <input type="email" formControlName="email" class="form-control" id="floatingInput"
+                    placeholder="name@example.com">
+                    <p class="form-text text-end">Enter Email Adress</p>
+                </div>
+                <div class="mb-4">
+                  <input type="password" formControlName="password" class="form-control" id="floatingPassword"
+                  placeholder="Password">
+                  <p class="form-text text-end">Enter Password</p>
+              </div>
+              
+                <button type="submit" name="submit" class="btn btn-primary w-100 my-3 shadow">Signup</button>
+                <p class="text-center m-0">Already have an account?  <a >Login here!</a></p>
+            </form>
+            <!-- Login Form -->
+        </div>
+    </div>
+    </main>
+    </form>
+
+  

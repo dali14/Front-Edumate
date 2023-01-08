@@ -1,0 +1,90 @@
+{
+  "signup": [
+    {
+      "name": "oussema",
+      "email": "oussema@gmail.com",
+      "password": "123456",
+      "id": 1,
+      "role": "admin"
+    },
+    {
+      "name": "rayen",
+      "email": "rayen@gmail.com",
+      "password": "123456",
+      "id": 2,
+      "role": "etudiant"
+    },
+    {
+      "name": "youssef",
+      "email": "youssef@gmail.com",
+      "password": "123456",
+      "role": "professor",
+      "id": 3
+    },
+    {
+      "name": "amin",
+      "email": "amine@gmail.com",
+      "password": "123456",
+      "role": "saleman",
+      "id": 4
+    }
+  ],
+  "postevent": [
+    {
+      "id": 2,
+      "date": "22/02/2023",
+      "time": "12:30",
+      "title": "data",
+      "place": "bizerte"
+    },
+    {
+      "id": 3,
+      "date": "22/03/2023",
+      "time": "12:30",
+      "title": "mobile",
+      "place": "bizerte"
+    },
+    {
+      "id": 6,
+      "date": "01/04/2023",
+      "time": "10:00",
+      "title": "hard work",
+      "place": "bizerte"
+    },
+    {
+      "id": 7,
+      "date": "22/01/2023",
+      "time": "12:30",
+      "title": "data",
+      "place": "bizerte"
+    }
+  ],
+  "postcourse": [
+    {
+      "id": 1,
+      "course": "angular",
+      "chapter": "2",
+      "date": "12/11/2022"
+    },
+    {
+      "id": 2,
+      "course": "big data",
+      "chapter": "1",
+      "date": "12/12/2022"
+    },
+    {
+      "id": 3,
+      "course": "spring",
+      "chapter": "3",
+      "date": "18/12/2022"
+    }
+  ],
+  "postproduct": [
+    {
+      "id": 1,
+      "name": "pc",
+      "price": "200d",
+      "valable": "22/02/2028"
+    }
+  ]
+}
